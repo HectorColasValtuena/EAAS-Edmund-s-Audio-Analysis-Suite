@@ -1,10 +1,10 @@
 ﻿{
 //Imports
-    //@include "./EAAS-AudioKeyframesToPeakArray.jsx"
+    //@include "./Controller/EAAS-Controller-AudioKeyframesToPeakArray.jsx"
 //dialog defaults
     var defThreshold = 50.0;
     var defMinInterval = 0.15;
-    var defSmoothRate = 0.99;
+    var defSmoothRate = 0.98;
     var defSrcLayer = "Audio Amplitude";
     var defTarLayer = "Audio Peaks";
 
