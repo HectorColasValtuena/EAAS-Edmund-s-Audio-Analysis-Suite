@@ -36,15 +36,17 @@
         
     //Main process
         //first gather source property keyframes to an object array, and extract the peaks to a new array
-        var peakArray = valueArrayToPeakArray(propertyToArray(srcProp), smoothRate, threshold);
+        var peakArray = valueArrayToPeakArray(propertyToArray(srcProp), smoothRate, threshold, minInterval);
         //store the peak array as keyframes on a new null layer
-        valueArrayToNewKeyframedNullLayer(peakArray, mainComp, tarLayerName, srcLayer.inPoint, srcLayer.outPoint);
+        var newLayer = valueArrayToNewKeyframedNullLayer(peakArray, mainComp, tarLayerName, srcLayer.inPoint, srcLayer.outPoint);
         //========
 
     //finishing clean-up
         app.endUndoGroup();
         alert("ALAKHAZAM!\r(done)");
         $.writeln("All done!");
+    
+    //Return a reference to the new layer
     }
 
 //Property source to keyframe values array
@@ -64,19 +66,24 @@
 
 
 //Check an array of {value, time} objects for peaks and return an array of {value, time} objects representing each peak
+//first and last keyframes are considered peaks for the sake of convenience
 //DIS is da magick
-    function valueArrayToPeakArray (tarArr, smoothRate, minThreshold) {//, minInterval) {
+    function valueArrayToPeakArray (tarArr, smoothRate, minThreshold, minInterval) {
         if (tarArr === undefined || tarArr === null || tarArr.length <= 0) { $.writeln("!!rightToLeftSmoother can't take a null or 0-length array: ", tarArr); return; }
         tarArr = rightToLeftSmoother (tarArr, smoothRate);
         var prevVal = 0;
         var outArr = new Array();
+        var lastPeak = tarArr[0].time - minInterval;
         
         //loop over the array. while applying a continuous falloff, If current value is larger than the last and the next create a {value, time} object in the output array.
         for (var i = 0, l = tarArr.length; i < l; i++) {
             if (tarArr[i].value > prevVal && tarArr[i].value >= minThreshold) { //if current value is higher than the last  AND higher than minimum threshold
                 if ((i + 1 >= l) || tarArr[i].value > tarArr[i+1].value) { //if the next position is out of the array OR of a lower value than current position the current position is treated as a peak
-                    //Peak Found
-                    outArr.push(tarArr[i]);
+                    if ((lastPeak + minInterval) <= tarArr[i].time) { //save this peak only if it is out of minInterval seconds of the last detected peak
+                        //Peak Found
+                        outArr.push(tarArr[i]);
+                        lastPeak = tarArr[i].time;
+                    }
                 }
             }
             tarArr[i].value = prevVal = Math.max(tarArr[i].value, prevVal * smoothRate);
@@ -111,7 +118,7 @@
 
 //Transform a processed array of {value, time} objects into a new null layer with keyframes for each entry
     //Takes an array of {value, time} objects, a reference to a composition, a name for the new layer, and in and out points for the newly created layer
-    //returns a reference to the created property in the new array
+    //returns a reference to the new layer
     function valueArrayToNewKeyframedNullLayer (srcArr, tarComp, newLayerName, newLayerInPoint, newLayerOutPoint) {
         /*DEBUG*/ $.writeln(" valueArrayToNewKeyframedNullLayer() is saving #", srcArr.length, " entries into new NULL layer named ", newLayerName);
 
@@ -130,10 +137,9 @@
         //create keyframes in the new layer
         for (var i = 0, l = srcArr.length; i < l; i++) {
             tarProp.setValueAtTime(srcArr[i].time, srcArr[i].value);
-            /*DEBUG*/ if((i%10) == 0) { $.writeln("  valueArrayToNewKeyframedNullLayer() pass #", i); }
+            /*DEBUG*/ if((i%10) == 0) { $.writeln("  valueArrayToNewKeyframedNullLayer() pass #", i);  $.writeln("    time: ", srcArr[i].time); }
         }
-        return tarProp;
+        return tarLayer;
     }
-
  //support function definitions
 }
