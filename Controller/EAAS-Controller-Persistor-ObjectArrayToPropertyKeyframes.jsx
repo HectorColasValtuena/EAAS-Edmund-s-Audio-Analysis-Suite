@@ -32,6 +32,7 @@
             tarProp.setValueAtKey(newKey, srcArr[i].value);
             //*/
              // TO-DO : implement ease-in/out parametrization
+             /* DEBUG */ if (i%100 == 0) { $.writeln("  objectArrayToPropertyKeyframes() cycle #", i); }
         }
         
         //finally return again a reference to the target property
