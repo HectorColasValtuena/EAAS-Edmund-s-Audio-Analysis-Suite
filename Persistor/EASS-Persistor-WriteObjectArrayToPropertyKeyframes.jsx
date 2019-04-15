@@ -10,21 +10,16 @@
  *  Optionally deletes previous keyframe data from the property.
  *  Returns the same reference to target property
  *
- *  @param {Array.<{value, time}>} srcArr - Data array to be written into keyframes. Every object instance within must contain at least a "value" and "time" field.
- *  @param {Property} tarProp - Reference to an AE Property. Must exist and be writable. Keyframes will be written to this property.
+ *  @param {Array.<{value, time, ...}>} srcArr - Data array to be written into keyframes. Every object instance within must contain at least a "value" and "time" field.
+ *  @param {Property} tarProp - Reference to an AE Property. Keyframes will be written into this property.
  *  @param {boolean} [preWipe=false] - If true, all prior keyframe data will be deleted from property tarProp. Default=false.
- *  @returns {Property} - Returns again a reference to target property so as to allow chained invocation.
+ *  @returns {boolean} - Returns true on success.
  */    
 EASS.Persistor.writeObjectArrayToPropertyKeyframes = function (srcArr, tarProp, preWipe) {
     //skip the process if no or invalid input data, return target property as normal
-    if (srcArr === undefined || srcArr === null || srcArr.length == 0) {
-        /* DEBUG */ $.writeln("??writeObjectArrayToPropertyKeyframes() received 0-length or undefined srcArr: ", srcArr);
-        return tarProp;
-    }
-
-    if (tarProp === undefined || tarProp === null) {
-        /* DEBUG */ $.writeln("??writeObjectArrayToPropertyKeyframes() received null or undefined tarProp: ", tarProp);
-        return tarProp;
+    if (srcArr === undefined || srcArr === null || tarProp === undefined || tarProp === null) {
+        /* DEBUG */ $.writeln("??writeObjectArrayToPropertyKeyframes() received null or undefined srcArr or tarProp: ", srcArr, tarProp);
+        return false;
     }
 
     //default preWipe to false if not included
@@ -42,9 +37,8 @@ EASS.Persistor.writeObjectArrayToPropertyKeyframes = function (srcArr, tarProp, 
         tarProp.setValueAtKey(newKey, srcArr[i].value);
         //*/
          // TO-DO : implement ease-in/out parametrization
-         /* DEBUG */ if (i%100 == 0) { $.writeln("  objectArrayToPropertyKeyframes() cycle #", i); }
+         /* DEBUG */ if (i%100 == 0) { $.writeln("  writeObjectArrayToPropertyKeyframes() cycle #", i); }
     }
     
-    //finally return again a reference to the target property
-    return tarProp;
+    return true;
 };
