@@ -2,7 +2,8 @@
 *                             Edmund's Audio Synchronization Suite
 *                          Programmed by Héctor Colás Valtueña @2019
 \**********************************************************************************************/
-    
+
+//@include "../EASS-Namespace.jsx"    
 //@include "./EASS-Persistor-WipePropertyKeyframes.jsx"
 
 /** @function writeObjectArrayToPropertyKeyframes

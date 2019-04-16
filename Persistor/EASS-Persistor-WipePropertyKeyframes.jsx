@@ -3,6 +3,8 @@
 *                          Programmed by Héctor Colás Valtueña @2019
 \**********************************************************************************************/
 
+//@include "../EASS-Namespace.jsx"
+
 /** @function wipePropertyKeyframes
  *  Deletes every keyframe from received AE Property.
  *

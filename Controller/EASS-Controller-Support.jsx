@@ -1,9 +1,12 @@
 /**********************************************************************************************\
 *                             Edmund's Audio Synchronization Suite
 *                          Programmed by Héctor Colás Valtueña @2019
+*
+*                                  Controller Support Methods
 \**********************************************************************************************/
 
-/** Controller Support Methods **/
+//@include "../EASS-Namespace.jsx"
+
 
 /** @function cloneObjectArray
  *  Duplicates an array non-recursively. Creates a new instance of Array and new, cloned instances of the objects in the original array.

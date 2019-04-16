@@ -3,6 +3,8 @@
 *                          Programmed by Héctor Colás Valtueña @2019
 \**********************************************************************************************/
 
+//@include "../EASS-Namespace.jsx"
+
 /** @function readPropertyKeyframesToObjectArray
  *  Reads keyframe values from received AE Property, returns a {value, time} Object array.
  *
