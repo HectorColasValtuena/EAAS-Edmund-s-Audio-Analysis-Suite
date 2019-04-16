@@ -12,7 +12,11 @@
  *  @returns {Array.<Object>} - New array populated by copies of the objects in the source array.
  */
 EASS.Controller.Support.cloneObjectArray = function (srcArr) {
-	return srcArr.map(this.shallowCloneObject);
+	var outArr = new Array(srcArr.length);
+	for (var i = 0, l = srcArr.length; i < l; i++) {
+		outArr[i] = this.shallowCloneObject(srcArr[i]);
+	}
+	return outArr;
 };
 
 /** @function shallowCloneObject
