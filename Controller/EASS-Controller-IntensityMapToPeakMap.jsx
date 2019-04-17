@@ -4,10 +4,12 @@
 \**********************************************************************************************/
 
 //@include "../EASS-Namespace.jsx"
+
 //@include "./EASS-Controller-Support.jsx"
 
 /** @function intensityMapToPeakMap
  *  Transforms a dense array of {value, time} objects into a sparsely populated array of {value, time} objects representing peaks in the value attribute 
+ *  This methods creates new arrays, leaving input arrays unaltered.
  *
  *  @param {Array.<{value, time, ...}>} intensityMap - Array representing a map of intensities.
  *  @param {number} smoothDecayRate - Floating number between 0 and 1 (inclusive). 1 = no smoothing at all; 0 = no decay (recommended 0.01-0.1)
