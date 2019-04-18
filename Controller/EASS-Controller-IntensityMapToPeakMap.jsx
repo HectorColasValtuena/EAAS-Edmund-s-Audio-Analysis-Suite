@@ -12,12 +12,12 @@
  *  This methods creates new arrays, leaving input arrays unaltered.
  *
  *  @param {Array.<{value, time, ...}>} intensityMap - Array representing a map of intensities.
- *  @param {number} smoothDecayRate - Floating number between 0 and 1 (inclusive). 1 = no smoothing at all; 0 = no decay (recommended 0.01-0.1)
+ *  @param {number} exponentialDecayRate - Floating number between 0 and 1 (inclusive). 1 = no effect at all; 0 = no decay (recommended 0.01-0.1)
  *  @param {number} minThreshold - Any value below this can't be considered a peak.
  *  @param {number} minInterval - Minimum time between peaks (seconds). If two or more peaks are closer in time than this, only the first will be considered.
  *  @returns {Array.<{value, time, ...}>} - Array representing a map of peaks.
  */
-EASS.Controller.intensityMapToPeakMap = function (paramIntensityMap, smoothDecayRate, minThreshold, minInterval) {
+EASS.Controller.intensityMapToPeakMap = function (paramIntensityMap, exponentialDecayRate, minThreshold, minInterval) {
     if (paramIntensityMap === undefined || paramIntensityMap === null) {
         /* DEBUG */ $.writeln("!!intensityMapToPeakMap() received null intensityMap: ", paramIntensityMap);
         return null;
