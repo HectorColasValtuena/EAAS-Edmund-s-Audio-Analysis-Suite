@@ -9,7 +9,9 @@ var EASS = EASS;
 EASS = (EASS !== undefined) ? EASS : {
     Interface: {},
     Plan: {},
-    Persistor: {},
+    Persistor: {
+    	Constants: {},
+    },
     Controller: {
         Support: {},
     },
