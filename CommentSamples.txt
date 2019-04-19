@@ -1,4 +1,3 @@
-
 /**********************************************************************************************\
 *                             Edmund's Audio Synchronization Suite
 *                          Programmed by Héctor Colás Valtueña @2019
