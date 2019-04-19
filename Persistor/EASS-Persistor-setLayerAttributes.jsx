@@ -20,7 +20,7 @@
  *  @param {Layer} targetLayer - Reference to Layer.
  *  @returns {Layer} - Returns again a reference to target layer so as to allow nested invocation.
  */
- EASS.Persistor.setLayerAttributes = function (layerAttributes, targetLayer) {
+ EASS.Persistor.setLayerAttributes = function (targetLayer, layerAttributes) {
  	if (layerAttributes === null || layerAttributes === undefined || targetLayer === null || targetLayer === undefined) {
  		/* DEBUG */ $.writeln("EASS.Persistor.setLayerAttributes received no layerAttributes or targetLayer object.")
  		return targetLayer;

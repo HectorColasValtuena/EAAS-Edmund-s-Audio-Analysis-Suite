@@ -23,7 +23,7 @@
  *		If omitted, will try to fetch AE's currently active composition. If no composition available will fail and return null.
  *  @returns {Layer} - Reference to newly created layer. Null if no composition available.
  */
-EASS.Persistor.createNullLayer = function (layerAttributes, parentComposition) {
+EASS.Persistor.createNullLayer = function (parentComposition, layerAttributes) {
 	if (parentComposition === undefined || parentComposition === null) {
 		parentComposition = this.getActiveComposition();
 		if (parentComposition === null) {
@@ -31,5 +31,5 @@ EASS.Persistor.createNullLayer = function (layerAttributes, parentComposition) {
 			return null;
 		}
 	}
-	return this.setLayerAttributes(layerAttributes, parentComposition.layers.addNull());
+	return this.setLayerAttributes(parentComposition.layers.addNull(), layerAttributes);
 }
