@@ -1,11 +1,11 @@
-/**********************************************************************************************\
+﻿/**********************************************************************************************\
 *                             Edmund's Audio Synchronization Suite
 *                          Programmed by Héctor Colás Valtueña @2019
 \**********************************************************************************************/
 
 //@include "../EASS-Namespace.jsx"
 
-//@include "./EASS-Constants.jsx"
+//@include "./EASS-Persistor-Constants.jsx"
 
 /** @function getActiveComposition
  *  Fetches and returns a reference to currently active composition. Returns null if no active item or active item is not a Composition.
