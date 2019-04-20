@@ -1,11 +1,11 @@
-/**********************************************************************************************\
+﻿/**********************************************************************************************\
 *                             Edmund's Audio Synchronization Suite
 *                          Programmed by Héctor Colás Valtueña @2019
 \**********************************************************************************************/
 
 //@include "../EASS-Namespace.jsx"
 
-//@include "../EASS-Persistor-SetLayerAttributes.jsx"
+//@include "./EASS-Persistor-SetLayerAttributes.jsx"
 
 /** @function createNullLayer
  *  Creates and returns a new null layer with the desired attributes within the desired composition or currently active composition.
