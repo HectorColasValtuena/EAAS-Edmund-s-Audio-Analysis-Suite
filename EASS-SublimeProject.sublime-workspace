@@ -1,0 +1,396 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"EA",
+				"EASS"
+			],
+			[
+				"Con",
+				"Controller"
+			],
+			[
+				"Per",
+				"Persistor"
+			],
+			[
+				"Pla",
+				"Plan"
+			],
+			[
+				"Int",
+				"Interface"
+			],
+			[
+				"inPo",
+				"inPoint"
+			],
+			[
+				"target",
+				"targetLayer"
+			],
+			[
+				"taer",
+				"targetLayer"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"layer",
+				"layerAttributes"
+			],
+			[
+				"active",
+				"activeItem"
+			],
+			[
+				"A",
+				"Amplitude"
+			],
+			[
+				"deca",
+				"decayRate"
+			],
+			[
+				"ar",
+				"arrayEndToStartExponentialDecay"
+			],
+			[
+				"ex",
+				"exponentialDecayComparator"
+			],
+			[
+				"last",
+				"lastValue"
+			],
+			[
+				"data",
+				"dataArray"
+			],
+			[
+				"dec",
+				"decayRate"
+			],
+			[
+				"writel",
+				"writeln"
+			],
+			[
+				"wip",
+				"wipeProperty"
+			],
+			[
+				"write",
+				"writeProperty"
+			],
+			[
+				"sh",
+				"shallowCloneObject"
+			],
+			[
+				"intens",
+				"intensityMap"
+			],
+			[
+				"inten",
+				"intensityMap"
+			],
+			[
+				"tar",
+				"tarProp"
+			],
+			[
+				"Play",
+				"PlaylistEntry"
+			],
+			[
+				"backgro",
+				"background-color\tproperty"
+			],
+			[
+				"string",
+				"stringArrToPlaylistEntryArr"
+			],
+			[
+				"return",
+				"returnArr"
+			],
+			[
+				"pl",
+				"plContent"
+			],
+			[
+				"Playlist",
+				"PlaylistData"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite"
+	],
+	"file_history":
+	[
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor/EASS-Persistor-GetActiveComposition.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor/EASS-Persistor-ReadPropertyKeyframesToObjectArray.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor/EASS-Persistor-setLayerAttributes.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/EASS-Namespace.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor/EASS-Persistor-Constants.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor/EASS-Persistor-Definitions.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Controller/EASS-Controller-ExponentialDecay.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Controller/EASS-Controller-Support.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Tests/PersistorTests.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Tests/ExponentialDecayTests.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Experiments-trash/EAAS-AudioKeyframesSmoother.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Controller/EASS-Controller-IntensityMapToPeakMap.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor/EASS-Persistor-WriteObjectArrayToPropertyKeyframes.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor/EASS-Persistor-WipePropertyKeyframes.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Tests/IncludeTestPart3.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Tests/IncludeTestPart2.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Tests/IncludeTestPart1.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Experiments-trash/EAAS-Controller-AudioKeyframesToPeakArray.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/HeaderSample.txt",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor/EASS-Persistor-PropertyKeyframesToObjectArray.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor/EASS-Persistor-ObjectArrayToPropertyKeyframes.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/samples/yu_timeremap/yu_timeRemap.jsx",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EAAS-Edmund-s-Audio-Analysis-Suite/HeaderSample.txt",
+		"/D/DIS/Proyectos/experimentasion/sementerio.jsx.txt",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EAAS-Edmund-s-Audio-Analysis-Suite/Controller/EAAS-Controller-AudioKeyframesToPeakArray.jsx",
+		"/D/tmp/Adobe.After.Effects.CC.2017.v14.0.0.Multi/TFHGF0GFGH5WIN/amtemu.v0.9.1.win-painter/painter.nfo",
+		"/C/Users/Mephi/Documents/Backups desarrollo/Qlinka/Ruleta/Proyecto/user.keystore",
+		"/D/Projects/IonicVideoSlideshow/IonicServe&RunChrome.bat",
+		"/C/Program Files (x86)/Google/Chrome/Application/master_preferences",
+		"/D/Projects/IonicVideoSlideshow/test.html",
+		"/D/Projects/IonicVideoSlideshow/src/app/classes/managed-playlist.class.ts",
+		"/D/Projects/IonicVideoSlideshow/src/app/services/playlist-manager/managed-playlist.class.ts",
+		"/D/Projects/IonicVideoSlideshow/Specs Fichero Playlist.txt",
+		"/D/Projects/IonicVideoSlideshow/src/app/playlist-manager-page/playlist-manager-page.page.ts",
+		"/D/Projects/IonicVideoSlideshow/src/app/services/playlist-manager/playlist-manager-service.service.ts",
+		"/D/Projects/IonicVideoSlideshow/tslint.json",
+		"/D/Projects/IonicVideoSlideshow/src/app/services/playlist-persistor/playlist-persistor-jsivs.service.ts",
+		"/D/Projects/IonicVideoSlideshow/src/app/app.module.ts",
+		"/D/Projects/IonicVideoSlideshow/src/app/playlist-manager-page/playlist-manager-page.page.html",
+		"/D/Projects/IonicVideoSlideshow/src/app/list/list.page.html",
+		"/D/Projects/IonicVideoSlideshow/src/app/playlist-manager-page/playlist-manager-page.module.ts",
+		"/D/Projects/IonicVideoSlideshow/src/tsconfig.app.json",
+		"/D/Projects/IonicVideoSlideshow/src/app/app-routing.module.ts",
+		"/D/Projects/IonicVideoSlideshow/src/app/player/player.page.scss",
+		"/D/Projects/IonicVideoSlideshow/src/app/player/player.page.html",
+		"/D/Projects/IonicVideoSlideshow/src/app/home/home.page.html",
+		"/D/Projects/IonicVideoSlideshow/src/app/app.component.ts",
+		"/D/Projects/IonicVideoSlideshow/src/app/app.component.html",
+		"/D/Projects/IonicVideoSlideshow/src/theme/variables.scss",
+		"/D/Projects/IonicVideoSlideshow/IonicVideoSlideshow-Sublime.sublime-project",
+		"/D/Projects/IonicVideoSlideshow/src/index.html",
+		"/D/Projects/IonicVideoSlideshow/src/theme/custom.scss",
+		"/D/Projects/IonicVideoSlideshow/src/tsconfig.spec.json",
+		"/D/Projects/IonicVideoSlideshow/tsconfig.json",
+		"/D/Projects/Ionic sample project/.gitignore",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/UnitAbilities.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/Operations.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/GameCapabilities.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/Units.xml",
+		"/C/Users/Mephi/Documents/My Games/Sid Meier's Civilization VI/Logs/Database.log",
+		"/C/Users/Mephi/Documents/My Games/Sid Meier's Civilization VI/Logs/Modding.log",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/UnitNames.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/Tactics.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/Notifications.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/Modifiers.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/Governments.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/Features.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/GlobalParameters.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/Requirements.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/Resources.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/WMDs.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/GoodyHuts.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/BehaviorTrees.xml",
+		"/D/Projects/IonicVideoSlideshow/package-lock.json",
+		"/D/Projects/IonicVideoSlideshow/IonicServe.bat",
+		"/D/Projects/IonicVideoSlideshow/package.json",
+		"/D/Projects/IonicVideoSlideshow/IonicVideoSlideshow/.gitignore",
+		"/D/Projects/IonicVideoSlideshow/.gitignore",
+		"/C/Users/Mephi/Documents/My Games/Sid Meier's Civilization VI/Logs/Startup.log",
+		"/C/Users/Mephi/Documents/My Games/Sid Meier's Civilization VI/Logs/Lua.log",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Text/en_US/Units_Text.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Text/en_US/Combat_Text.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Text/Vanilla_es_ES.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/Civilizations.xml",
+		"/C/Users/Mephi/Documents/Firaxis ModBuddy/Civilization VI/Tercio1.0/Tercio1.0/cooker.log",
+		"/C/Users/Mephi/Documents/Firaxis ModBuddy/Civilization VI/Tercio1.0/Tercio1.0/Tercio1.0.civ6proj",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/UnitOperations.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/Gameplay/Data/UnitCommands.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/UI/Icons/Icons_UnitPortraits.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/UI/Icons/Icons_Units.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI/Base/Assets/UI/Icons/Icons_UnitFlags.xml",
+		"/C/Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VI SDK Assets/pantry/Behaviors/Musketman.bhv"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "EASS-SublimeProject.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 311.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
