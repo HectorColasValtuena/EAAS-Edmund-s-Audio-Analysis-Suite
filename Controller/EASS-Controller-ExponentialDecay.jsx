@@ -16,7 +16,9 @@
  *  @returns {Array.<{value, time, ...}>} - Returns again a reference to the received data array for convenience
  */
 EASS.Controller.arrayBidirectionalExponentialDecay = function (dataArray, decayRate) {
-	return this.arrayStartToEndExponentialDecay(this.arrayEndToStartExponentialDecay(dataArray, decayRate), decayRate);
+	this.arrayStartToEndExponentialDecay(dataArray, decayRate);
+	this.arrayEndToStartExponentialDecay(dataArray, decayRate);
+	return dataArray;
 }
 
 /** @function arrayStartToEndExponentialDecay
@@ -31,7 +33,7 @@ EASS.Controller.arrayBidirectionalExponentialDecay = function (dataArray, decayR
 EASS.Controller.arrayStartToEndExponentialDecay = function (dataArray, decayRate) {
 	var lastValue = 0;
 
-	for (var i = 0, l = dataArray.length; i++; i < l) {
+	for (var i = 0, l = dataArray.length; i < l; i++) {
 		dataArray[i].value = lastValue = this.exponentialDecayComparator(dataArray[i].value, lastValue, decayRate);
 	}
 
@@ -50,7 +52,7 @@ EASS.Controller.arrayStartToEndExponentialDecay = function (dataArray, decayRate
 EASS.Controller.arrayEndToStartExponentialDecay = function (dataArray, decayRate) {
 	var lastValue = 0;
 
-	for (var i = dataArray.length-1; i--; i >= 0) {
+	for (var i = dataArray.length-1; i >= 0;  i--) {
 		dataArray[i].value = lastValue = this.exponentialDecayComparator(dataArray[i].value, lastValue, decayRate);
 	}
 
