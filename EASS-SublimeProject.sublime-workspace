@@ -4,26 +4,6 @@
 		"selected_items":
 		[
 			[
-				"EA",
-				"EASS"
-			],
-			[
-				"Con",
-				"Controller"
-			],
-			[
-				"Per",
-				"Persistor"
-			],
-			[
-				"Pla",
-				"Plan"
-			],
-			[
-				"Int",
-				"Interface"
-			],
-			[
 				"inPo",
 				"inPoint"
 			],
@@ -131,6 +111,27 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "//@include \"../Persistor/EASS-Persistor-GetActiveComposition.jsx\"\n//@include \"../Persistor/EASS-Persistor-ReadPropertyKeyframesToObjectArray.jsx\"\n//@include \"../Persistor/EASS-Persistor-WriteObjectArrayToPropertyKeyframes.jsx\"\n//@include \"../Persistor/EASS-Persistor-CreateNullLayer.sjx\"\n\nvar mainComp = EASS.Persistor.getActiveComposition();\nif (mainComp === null) { $.writeln(\"Main composition not found\"); return; }\n\nvar audioAmplitudeProperty = mainComp.layer(\"Audio Amplitude\").effects(\"Both Channels\").slider;\nif (audioAmplitudeProperty === undefined) { $.writeln(\"Required Audio Amplitude layer not found\"); return; }\n\nvar outputLayer = EASS.Persistor.createNullLayer(undefined, { name: \"Exponential Decay\", comment: \"dis is a test\",  locked: true });\n\nvar dataArray = EASS.Persistor.readPropertyKeyframesToObjectArray(audioAmplitudeProperty);\n\nEASS.Persistor.arrayBidirectionalExponentialDecay(dataArray);\n\n",
+			"file": "Tests/ExponentialDecayTests.jsx",
+			"file_size": 920,
+			"file_write_time": 132001993827042919,
+			"settings":
+			{
+				"buffer_size": 915,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Controller/EASS-Controller-ExponentialDecay.jsx",
+			"settings":
+			{
+				"buffer_size": 4218,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -168,10 +169,14 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite"
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Controller",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor",
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Tests"
 	],
 	"file_history":
 	[
+		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/EASS-SublimeProject.sublime-workspace",
 		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor/EASS-Persistor-GetActiveComposition.jsx",
 		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor/EASS-Persistor-ReadPropertyKeyframesToObjectArray.jsx",
 		"/C/Users/Mephi/Documents/Adobe Scripts/EASS-Edmunds-Audio-Synchronization-Suite/Persistor/EASS-Persistor-setLayerAttributes.jsx",
@@ -281,6 +286,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			");\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -298,8 +304,66 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Tests/ExponentialDecayTests.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 915,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								911,
+								914
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Controller/EASS-Controller-ExponentialDecay.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -388,7 +452,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 311.0,
+	"side_bar_width": 269.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
