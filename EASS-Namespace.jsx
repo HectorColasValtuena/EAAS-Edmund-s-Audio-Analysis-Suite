@@ -12,7 +12,6 @@ EASS = (EASS !== undefined) ? EASS : {
     Persistor: {
     	Constants: {},
     },
-    Controller: {
-        Support: {},
-    },
+    Controller: {},
+    Support: {},
 };

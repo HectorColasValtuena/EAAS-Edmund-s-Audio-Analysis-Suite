@@ -24,7 +24,7 @@ EASS.Controller.intensityMapToPeakMap = function (paramIntensityMap, exponential
     }
 
     //duplicate input array so as to not alter original contents
-    var intensityMap = this.Support.cloneObjectArray(srcIntensityMap); 
+    var intensityMap = EASS.Support.cloneObjectArray(srcIntensityMap); 
 
 
 };
