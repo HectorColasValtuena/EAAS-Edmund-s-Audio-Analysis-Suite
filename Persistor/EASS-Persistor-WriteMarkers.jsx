@@ -35,19 +35,6 @@ EASS.Persistor.writeObjectArrayToCompositionMarkers = function (objectArray, tar
 	this.writeMarkerArrayToCompositionMarkers(markerArray, targetComp);
 }
 
-/** @function writeObjectArrayToCompositionMarkers
- *  Writes an array of keyframe objects as markers to a composition maker row.
- *	If no composition assigned, markers will be written to active composition if found.
- *
- *  @param {Array.<{value, time, ...}>} objectArray - Array of keyframe objects to write. "comment" and "duration" attributes will be used to set some marker attributes.
- *  @param {CompItem} [targetComp] - [OPTIONAL] Composition to write markers to. Will try to find active composition if omitted.
- *  @param {Object} [maskObj] - [OPTIONAL] Mask indicating what object properties to persist into a marker value.
- */
-EASS.Persistor.writeObjectArrayToPropertyMarkers = function (objectArray, targetProp, maskObj) {
-	var markerArray = this.keyframeObjectArrayToMarkerValueArray(objectArray, maskObj);
-	this.writeMarkerArrayToPropertyMarkers(markerArray, targetProp);
-}
-
 /** @function writeMarkerArrayToLayerMarkers
  *  Writes an array of MarkerValue objects to a layer's markers property.
  *
