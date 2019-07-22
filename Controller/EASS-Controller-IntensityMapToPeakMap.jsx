@@ -30,8 +30,8 @@ EASS.Controller.intensityMapToPeakMap = function (paramIntensityMap, exponential
 };
 
 
-
-
+/*TO-DO*/ //Is this even? Should delete? Redo? wtf
+/*TO-DO*/ //Redo this shiet?
 
 //Check an array of {value, time} objects for peaks and return an array of {value, time} objects representing each peak
 //first and last keyframes are considered peaks for the sake of convenience
