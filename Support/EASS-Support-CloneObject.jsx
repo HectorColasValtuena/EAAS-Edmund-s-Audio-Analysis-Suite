@@ -30,4 +30,5 @@ EASS.Support.cloneObjectArray = function (srcArr) {
  */
 EASS.Support.shallowCloneObject = function (srcObj) {
 	return Object.assign({}, srcObj);
+	/*TO-DO*/ //Object.assign doesn't exist here? find another way to clone
 }

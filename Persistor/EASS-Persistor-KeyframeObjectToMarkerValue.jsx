@@ -5,7 +5,7 @@
 
 //@include "../EASS-Namespace.jsx"
 
-//@include "../Support/EASS-Support-FilterObjectAttributes
+//@include "../Support/EASS-Support-FilterObjectAttributes.jsx"
 
 /** @function keyframeObjectToMarkerValue
  *  Creates a new MarkerValue object taking its parameters from a values object and an optional parameters mask object
