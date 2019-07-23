@@ -18,16 +18,17 @@ if (writeLayer === undefined
 	) { $.writeln("Required Layer not found: ", readLayer, writeLayer, wipeLayer); }
 
 var writeArray = [
-	{ value: 1, time: 0 },
+	{ value: 1, time: 0, comment: "5mentarios" },
 	{ value: 7, time: 0.2, duration: 0.2},
-	{ value: 88, time: 0.5, duration: 0.5, heil:"hitler", nein: 14.88},
-	{ value: 69, time: 1.5, duration: 1, sex:"ual"},
-	{ value: 0, time: 2, duration: 0.25, text:"texto"}
+	{ value: 88, time: 0.5, comment: "fascism", duration: 0.5, heil:"hitler", nein: 14.88 },
+	{ value: 69, time: 1.5, duration: 1, sex:"ual" },
+	{ value: 0, time: 2, duration: 0.25, text:"texto" },
+	{ value: 42, time: 2.1, comment: 42},
 ];
 
 $.writeln("writing to layer");
 EASS.Persistor.writeObjectArrayToLayerMarkers(writeArray, writeLayer, undefined);
-EASS.Persistor.writeObjectArrayToCompositionMarkers(writeArray, mainComp, undefined)
+//EASS.Persistor.writeObjectArrayToCompositionMarkers(writeArray, mainComp, undefined)
 
 /*
 $.writeln("reading to layer");
