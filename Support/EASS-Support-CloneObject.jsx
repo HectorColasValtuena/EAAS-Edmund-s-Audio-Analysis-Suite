@@ -34,4 +34,5 @@ EASS.Support.shallowCloneObject = function (srcObj) {
 	for (var key in srcObj) {
 		returnObj[key] = srcObj[key];
 	}
+	return returnObj;
 }
