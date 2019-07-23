@@ -57,7 +57,8 @@ EASS.Persistor.writeMarkerArrayToCompositionMarkers = function (markerArray, tar
 		targetComp = this.getActiveComposition();
 	}
 
-	this.writeMarkerArrayToPropertyMarkers(markerArray, targetComp.property("Marker"));
+	/*TO-DO*/ //Find a proper way to access a composition's markers
+	this.writeMarkerArrayToPropertyMarkers(markerArray, targetComp.layer("Marker"));
 }
 
 /** @function writeMarkerArrayToPropertyMarkers
@@ -68,6 +69,7 @@ EASS.Persistor.writeMarkerArrayToCompositionMarkers = function (markerArray, tar
  *  @param {AVLayer} targetLayer - Target layer.
  */
 EASS.Persistor.writeMarkerArrayToPropertyMarkers = function (markerArray, targetProp) {
+	/*DEBUG*/ $.writeln("writeMarkerArrayToPropertyMarkers targetProp: ", targetProp);
 	/*var timeArray = new Array();
 	for (var i = 0, l = markerArray.length; i < l; i++) {
 		timeArray.push(markerArray[i].getParameters().time);
