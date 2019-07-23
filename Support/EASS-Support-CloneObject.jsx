@@ -29,6 +29,9 @@ EASS.Support.cloneObjectArray = function (srcArr) {
  *  @returns {Object} - Duplicate of the original object
  */
 EASS.Support.shallowCloneObject = function (srcObj) {
-	return Object.assign({}, srcObj);
-	/*TO-DO*/ //Object.assign doesn't exist here? find another way to clone
+	/*TO-DO*/ //Test properly
+	var returnObj = {};
+	for (var key in srcObj) {
+		returnObj[key] = srcObj[key];
+	}
 }
