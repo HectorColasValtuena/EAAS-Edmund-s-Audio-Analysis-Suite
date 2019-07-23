@@ -5,6 +5,7 @@
 
 //@include "../EASS-Namespace.jsx"
 
+//@include "./EASS-Persistor-Constants.jsx"
 //@include "../Support/EASS-Support-FilterObjectAttributes.jsx"
 
 /** @function keyframeObjectToMarkerValue
@@ -21,8 +22,13 @@
  */
 EASS.Persistor.keyframeObjectToMarkerValue = function (paramObj, maskObj) {
 	paramObj = EASS.Support.filterObjectAttributes(paramObj, maskObj);
+
 	//var newMarker = new MarkerValue(paramObj.comment, paramObj.chapter, paramObj.url, paramObj.frameTarget, paramObj.cuePointName, paramObj);
-	var newMarker = new MarkerValue(paramObj.comment);
+	//Create a new marker object. It requires a comment so default will be used if no paramObj.comment available
+	var newMarker = new MarkerValue(
+		(paramObj.comment !== undefined && paramObj.comment !== null) ?
+		paramObj.comment : EASS.Persistor.Constants.markerDefaultComment
+	);
 
 	if (paramObj.duration !== undefined) {
 		newMarker.duration = paramObj.duration;
