@@ -67,11 +67,15 @@ EASS.Persistor.writeMarkerArrayToCompositionMarkers = function (markerArray, tar
  *  @param {Array.<MarkerValue>} markerArray - Array of MarkerValue objects to write.
  *  @param {AVLayer} targetLayer - Target layer.
  */
- EASS.Persistor.writeMarkerArrayToPropertyMarkers = function (markerArray, targetProp) {
- 	var timeArray = new Array();
- 	for (var i = 0, l = markerArray.length; i < l; i++) {
- 		timeArray.push(markerArray[i].getParameters().time);
- 	}
-
- 	targetProp.setValuesAtTimes(timeArray, markerArray);
- }
+EASS.Persistor.writeMarkerArrayToPropertyMarkers = function (markerArray, targetProp) {
+	/*var timeArray = new Array();
+	for (var i = 0, l = markerArray.length; i < l; i++) {
+		timeArray.push(markerArray[i].getParameters().time);
+	}
+	targetProp.setValuesAtTimes(timeArray, markerArray);
+	//Discarded because property.setValuesAtTimes can't write markers*/
+	for (var i = 0, l = markerArray.length; i < l; i++) {
+		/*TO-DO*/ //Remove time and duration attributes from the marker value before writing
+		targetProp.setValueAtTime(markerArray[i].getParameters().time, markerArray[i]);
+	}
+}
