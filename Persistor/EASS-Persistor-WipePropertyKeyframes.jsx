@@ -22,4 +22,4 @@ EASS.Persistor.wipePropertyKeyframes = function (tarProp) {
     }
 
     return tarProp;
- };
+};
