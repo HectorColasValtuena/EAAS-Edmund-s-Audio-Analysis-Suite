@@ -57,7 +57,7 @@ EASS.Persistor.writeMarkerArrayToCompositionMarkers = function (markerArray, tar
 		targetComp = this.getActiveComposition();
 	}
 
-	/*TO-DO*/ //Find a proper way to access a composition's markers
+	/*TO-DO*/ /*FIX*/ //Find a proper way to access a composition's markers
 	this.writeMarkerArrayToPropertyMarkers(markerArray, targetComp.layer("Marker"));
 }
 
@@ -69,15 +69,13 @@ EASS.Persistor.writeMarkerArrayToCompositionMarkers = function (markerArray, tar
  *  @param {AVLayer} targetLayer - Target layer.
  */
 EASS.Persistor.writeMarkerArrayToPropertyMarkers = function (markerArray, targetProp) {
-	/*DEBUG*/ $.writeln("writeMarkerArrayToPropertyMarkers targetProp: ", targetProp);
-	/*var timeArray = new Array();
 	for (var i = 0, l = markerArray.length; i < l; i++) {
-		timeArray.push(markerArray[i].getParameters().time);
-	}
-	targetProp.setValuesAtTimes(timeArray, markerArray);
-	//Discarded because property.setValuesAtTimes can't write markers*/
-	for (var i = 0, l = markerArray.length; i < l; i++) {
-		/*TO-DO*/ //Remove time and duration attributes from the marker value before writing
-		targetProp.setValueAtTime(markerArray[i].getParameters().time, markerArray[i]);
+		//Delete the time from the marker parameters and rewrite them
+		var markerParams = markerArray[i].getParameters();
+		var markerTime = markerParams.time;
+		delete markerParams.time;
+		markerArray[i].setParameters(markerParams);
+		//Write the marker object at the target time
+		targetProp.setValueAtTime(markerTime, markerArray[i]);		
 	}
 }

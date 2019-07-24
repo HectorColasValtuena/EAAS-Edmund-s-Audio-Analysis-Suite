@@ -29,9 +29,12 @@ EASS.Persistor.keyframeObjectToMarkerValue = function (paramObj, maskObj) {
 		(paramObj.comment !== undefined && paramObj.comment !== null) ?
 		paramObj.comment : EASS.Persistor.Constants.markerDefaultComment
 	);
+	delete paramObj.comment;
 
+	//if there is a duration, set duration and remove it from the parameters object
 	if (paramObj.duration !== undefined) {
 		newMarker.duration = paramObj.duration;
+		delete paramObj.duration;
 	}
 
 	newMarker.setParameters(paramObj);
