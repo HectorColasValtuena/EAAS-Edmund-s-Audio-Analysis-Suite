@@ -9,6 +9,7 @@
 //@include "./EASS-Persistor-WriteObjectArrayToPropertyKeyframes.jsx"
 //@include "./EASS-Persistor-KeyframeObjectToMarkerValue.jsx"
 //@include "./EASS-Persistor-GetActiveComposition.jsx"
+//@include "./EASS-Persistor-WipePropertyKeyframes.jsx"
 
 /** @function writeObjectArrayToLayerMarkers
  *  Writes an array of keyframe objects as markers to a layer's markers property.
@@ -16,10 +17,11 @@
  *  @param {Array.<{value, time, ...}>} objectArray - Array of keyframe objects to write. "comment" and "duration" attributes will be used to set some marker attributes.
  *  @param {AVLayer} targetLayer - Target layer.
  *  @param {Object} [maskObj] - [OPTIONAL] Mask indicating what object properties to persist into a marker value.
+ *  @param {boolean} [preWipe=false] - If true, all prior marker data will be deleted. Default=false.
  */
-EASS.Persistor.writeObjectArrayToLayerMarkers = function (objectArray, targetLayer, maskObj) {
+EASS.Persistor.writeObjectArrayToLayerMarkers = function (objectArray, targetLayer, maskObj, preWipe) {
 	var markerArray = this.keyframeObjectArrayToMarkerValueArray(objectArray, maskObj);
-	this.writeMarkerArrayToLayerMarkers(markerArray, targetLayer);
+	this.writeMarkerArrayToLayerMarkers(markerArray, targetLayer, preWipe);
 }
 
 /** @function writeObjectArrayToCompositionMarkers
@@ -29,10 +31,11 @@ EASS.Persistor.writeObjectArrayToLayerMarkers = function (objectArray, targetLay
  *  @param {Array.<{value, time, ...}>} objectArray - Array of keyframe objects to write. "comment" and "duration" attributes will be used to set some marker attributes.
  *  @param {CompItem} [targetComp] - [OPTIONAL] Composition to write markers to. Will try to find active composition if omitted.
  *  @param {Object} [maskObj] - [OPTIONAL] Mask indicating what object properties to persist into a marker value.
+ *  @param {boolean} [preWipe=false] - If true, all prior marker data will be deleted. Default=false.
  */
-EASS.Persistor.writeObjectArrayToCompositionMarkers = function (objectArray, targetComp, maskObj) {
+EASS.Persistor.writeObjectArrayToCompositionMarkers = function (objectArray, targetComp, maskObj, preWipe) {
 	var markerArray = this.keyframeObjectArrayToMarkerValueArray(objectArray, maskObj);
-	this.writeMarkerArrayToCompositionMarkers(markerArray, targetComp);
+	this.writeMarkerArrayToCompositionMarkers(markerArray, targetComp, preWipe);
 }
 
 /** @function writeMarkerArrayToLayerMarkers
@@ -40,9 +43,10 @@ EASS.Persistor.writeObjectArrayToCompositionMarkers = function (objectArray, tar
  *
  *  @param {Array.<MarkerValue>} markerArray - Array of MarkerValue objects to write.
  *  @param {AVLayer} targetLayer - Target layer.
+ *  @param {boolean} [preWipe=false] - If true, all prior marker data will be deleted. Default=false.
  */
-EASS.Persistor.writeMarkerArrayToLayerMarkers = function (markerArray, targetLayer) {
-	this.writeMarkerArrayToPropertyMarkers(markerArray, targetLayer.property("Marker"));
+EASS.Persistor.writeMarkerArrayToLayerMarkers = function (markerArray, targetLayer, preWipe) {
+	this.writeMarkerArrayToPropertyMarkers(markerArray, targetLayer.property("Marker"), preWipe);
 }
 
 /** @function writeMarkerArrayToCompositionMarkers
@@ -51,14 +55,15 @@ EASS.Persistor.writeMarkerArrayToLayerMarkers = function (markerArray, targetLay
  *
  *  @param {Array.<MarkerValue>} markerArray - Array of MarkerValue objects to write.
  *  @param {CompItem} [targetComp] - [OPTIONAL] Composition to write markers to. Will try to find active composition if omitted.
+ *  @param {boolean} [preWipe=false] - If true, all prior marker data will be deleted. Default=false.
  */
-EASS.Persistor.writeMarkerArrayToCompositionMarkers = function (markerArray, targetComp) {
+EASS.Persistor.writeMarkerArrayToCompositionMarkers = function (markerArray, targetComp, preWipe) {
 	if (targetComp === undefined || targetComp === null) {
 		targetComp = this.getActiveComposition();
 	}
 
 	/*TO-DO*/ /*FIX*/ //Find a proper way to access a composition's markers
-	this.writeMarkerArrayToPropertyMarkers(markerArray, targetComp.layer("Marker"));
+	this.writeMarkerArrayToPropertyMarkers(markerArray, targetComp.layer("Marker"), preWipe);
 }
 
 /** @function writeMarkerArrayToPropertyMarkers
@@ -67,8 +72,13 @@ EASS.Persistor.writeMarkerArrayToCompositionMarkers = function (markerArray, tar
  *
  *  @param {Array.<MarkerValue>} markerArray - Array of MarkerValue objects to write.
  *  @param {AVLayer} targetLayer - Target layer.
+ *  @param {boolean} [preWipe=false] - If true, all prior marker data will be deleted. Default=false.
  */
-EASS.Persistor.writeMarkerArrayToPropertyMarkers = function (markerArray, targetProp) {
+EASS.Persistor.writeMarkerArrayToPropertyMarkers = function (markerArray, targetProp, preWipe) {
+	if (preWipe === true) {
+		this.wipePropertyKeyframes(targetProp);
+	}
+
 	for (var i = 0, l = markerArray.length; i < l; i++) {
 		//Delete the time from the marker parameters and rewrite them
 		var markerParams = markerArray[i].getParameters();
