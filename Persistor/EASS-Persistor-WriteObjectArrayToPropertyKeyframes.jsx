@@ -27,7 +27,7 @@ EASS.Persistor.writeObjectArrayToPropertyKeyframes = function (srcArr, tarProp, 
     if (preWipe === undefined) { preWipe = false; }
     
     //initial wipe of all keyframes in target property
-    if (preWipe) { EASS.Persistor.wipePropertyKeyframes(tarProp); }
+    if (preWipe) { this.wipePropertyKeyframes(tarProp); }
 
     //separate values and times into arrays to feed them into the setValuesAtTimes method
     var times = new Array(), values = new Array();
