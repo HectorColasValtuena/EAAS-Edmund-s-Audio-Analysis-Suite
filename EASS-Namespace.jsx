@@ -13,5 +13,7 @@ EASS = (EASS !== undefined) ? EASS : {
     	Constants: {},
     },
     Controller: {},
-    Support: {},
+    Support: {
+    	Math: {},
+    },
 };
