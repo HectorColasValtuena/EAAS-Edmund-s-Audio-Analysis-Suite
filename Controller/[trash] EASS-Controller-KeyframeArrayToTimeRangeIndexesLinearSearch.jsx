@@ -5,7 +5,7 @@
 
 //@include "../EASS-Namespace.jsx"
 
-/** @function keyframeArrayToTimeRangeIndexes
+/** @function keyframeArrayToTimeRangeIndexesLinearSearch
  *  Takes an array of keyframes, markers, or any frame-like object with at least a time property.
  *  Returns an object containing the indexes of the first and last array entries
  *  within the time range defined by startTime and endTime.
