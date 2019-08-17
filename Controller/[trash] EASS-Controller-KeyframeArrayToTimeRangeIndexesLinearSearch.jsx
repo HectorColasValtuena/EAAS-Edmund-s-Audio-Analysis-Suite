@@ -17,7 +17,7 @@
  *  @param {number} endTime - In seconds. Ending time of the required time range. Will correspond to frameArray final index if undefined or omitted.
  *  @returns {<{startIndex, endIndex}>} - Object containing the index of the first (startIndex) and last (endIndex) entries within defined time range.
  */
-EASS.Controller.keyframeArrayToTimeRangeIndexes = function (frameArray, startTime, endTime) {
+EASS.Controller.keyframeArrayToTimeRangeIndexesLinearSearch = function (frameArray, startTime, endTime) {
 	//if endTime parameter is not after startTime log an error and return null
 	if ((startTime !== undefined && endTime !== undefined) && startTime > endTime) {
 		/*LOG*/ $.writeln("? keyframeArrayToTimeRangeIndexes(): endTime must be after startTime");
